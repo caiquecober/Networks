@@ -353,7 +353,7 @@ def pipeline_graph_with_fixed_rolling_window(df, threshold, pct_change, window_s
         mst = nx.minimum_spanning_tree(Gx)
 
         # Calculate centrality measures for the minimum spanning tree
-        centrality = nx.degree_centrality(mst)
+        centrality = nx.eigenvector_centrality(mst,max_iter=1000)
 
         # Sort nodes by centrality (descending) and select the top 3
         top_central_nodes = sorted(centrality, key=centrality.get, reverse=True)[:3]
