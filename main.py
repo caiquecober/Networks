@@ -7,7 +7,7 @@ st.set_page_config(page_title="Exploring Networks Centrality Over Time", layout=
 def plot_ts(df, nome, units, chart):
     fig = go.Figure()
     
-    colors = ['#195385','#0d6986','#FF5003','#fead67','#266a7c','#808080','#8a8a8a','#949494','#9d9d9d','#a7a7a7','#b1b1b1','#bbbbbb','#c5c5c5','#cecece','#d8d8d8','#e2e2e2','#ececec','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6']
+    colors = ['#15616D','#001524','#FF7d00','#78290F','#FFECD1','#808080','#8a8a8a','#949494','#9d9d9d','#a7a7a7','#b1b1b1','#bbbbbb','#c5c5c5','#cecece','#d8d8d8','#e2e2e2','#ececec','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6','#f6f6f6']
 
     if chart == 'Hist':
         for i in range(len(df.columns)):
