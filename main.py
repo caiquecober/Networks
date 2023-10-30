@@ -123,7 +123,7 @@ def  calculate_network(raw_df):
             flattened_data.append((time, asset, degree_centrality, rank[asset]))
 
     # Create a DataFrame
-    df = pd.DataFrame(flattened_data, columns=['Timestamp', 'Asset', 'Degree Centrality', 'Rank'])
+    df = pd.DataFrame(flattened_data, columns=['Timestamp', 'Asset', 'Eigenvector Centrality', 'Rank'])
 
     return df
 
