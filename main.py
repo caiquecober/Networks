@@ -132,7 +132,7 @@ def  calculate_network(raw_df):
 ############################### Header Work
 
 
-st.markdown('# Exploring Newtorks Centrality Over Time')
+st.markdown('# Exploring Newtorks Eigenvector Centrality Over Time')
 tab1, tab2 = st.tabs(['Static','Build Your Own'])
 
 
