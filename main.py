@@ -216,7 +216,7 @@ with tab2:
     df_personal = get_etf(lst_tickers)
 
     df = calculate_network(df_personal)
-    st.write(df.head())
+    #st.write(df.head())
 
     rolling_avg_data  = df.pivot(index='Timestamp',columns='Asset',values='Rank').fillna(0).rolling(90).mean()
 
@@ -234,5 +234,25 @@ with tab2:
 
 
     st.plotly_chart(fig, use_container_width=True)
+
+# with tab3:
+#     col1,col2,_ = st.columns([1,1,5])
+#     slc_mj_mi = col1.selectbox('Choose Categories ',['Major','Minor'])
+
+#     if slc_mj_mi == 'Major':
+#         slc_title = col2.selectbox('Chose Asset Class ',['Commodities','Currencies','Equities','Fixed Income','Crypto'])
+#         var_name = 'variable_0'
+#     if slc_mj_mi ==  'Minor':
+#         slc_title = col2.selectbox('Chose Asset Class',['Energy','Agg','Metals','USD/DM','USD/EM','EUR/ALL','Others',
+#                                                         'US Factors and Sectors','EU Factors and Sectors','Countries',
+#                                                         'US Fixed Income','EU Fixed Income','Smart Contract',
+#                                                         'Metaverse','DeFi','Privacy Coins'])
+#         var_name = 'variable_1'
+
+#     ################################ Data Work
+#     #raw_df= load_data(slc_title, var_name)
+#     fig = pipeline_graph(raw_df,0.5,1,100)
+
+#     st.plotly_chart(fig, use_container_width=True)
 
 
